@@ -30,9 +30,13 @@ export const Pokemon = () => {
                 const data = await res.json();
 
                 return data;
+               
             });
+             
 
             const allResponses = await Promise.all(pokemonResults);
+
+            console.log(allResponses);
 
             setPokemon(allResponses);
             setLoading(false);
@@ -84,6 +88,12 @@ export const Pokemon = () => {
                 <header>
                     <h1>Pokemon Gallery</h1>
                 </header>
+
+
+                
+
+
+
 
                 <div>
 
